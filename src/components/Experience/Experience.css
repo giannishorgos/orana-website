@@ -3,18 +3,24 @@ p {
     margin: 0;
 }
 #experience{
-    
+    width: 100%;
     height: fit-content;
-    background-image: url('../../assets/question.png');
+    /* background-image: url('../../assets/question.png');   */
     user-select: none;
-    
+    display: flex;
+    justify-content: center;
 }
 .container{
+width: 1200px;
+height: 100%;
+}
+
+.flex-experience {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 4rem;
+    padding: 1rem;
 }
 
 .faq-container{
@@ -27,16 +33,20 @@ p {
 .collapse{
     background-color: rgba(232,228,228,0.7);
     border-radius: 10px;
-    width: 50%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .panel{
 
 background-color: #e8e4e4;
-margin: 2rem;   
+margin: 1rem 0 1rem;   
 border-radius: 15px !important;
 font-size: 20px;
-width: fit-content;
+width: 80%;
 }
 
 .timeline-container{
@@ -55,8 +65,97 @@ width: fit-content;
     margin-right: 4rem;
     
 }
+
+
 .timeline-item{
     margin: -5px;
     color: black;
     font-size: 20px;
+}
+
+.titles {
+    font-weight:bold;
+    font-size: 50px;
+    color: var(--color-bg);
+    text-shadow: -1px -1px 0 var(--color-bg-light), 1px -1px 0 var(--color-bg-light), -1px 1px 0 var(--color-bg-light), 1px 1px 0 var(--color-bg-light);
+    transition: 0.8s color;
+    width: fit-content;
+    user-select: none;
+    margin-top: 3rem; 
+}
+
+.faq-animation {
+    animation: faq-anim 2s;
+}
+
+@keyframes faq-anim {
+    0% {
+        opacity: 0.3;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+
+.faq-txt-animation {
+    animation: faq-txt-anim 2s;
+}
+
+@keyframes faq-txt-anim {
+    0% {
+        opacity: 0.3;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+
+.timeline-animation {
+    animation: timeline-anim 2s;
+}
+
+@keyframes timeline-anim {
+    0% {
+        opacity: 0.3;
+        transform: translateX(-20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+
+.timeline-txt-animation {
+    margin-top: 10px;
+    animation: timeline-txt-anim 2s;
+}
+
+@keyframes timeline-txt-anim {
+    0% {
+        opacity: 0.3;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 100%;
+    }
+
+    .collapse {
+        width: 95%;
+    }
+
 }
